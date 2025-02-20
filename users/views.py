@@ -4,6 +4,10 @@ from .forms import UserRegistrationForm
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from .serializers import UserSerializer
+from rest_framework.generics import ListCreateAPIView
+from django.contrib.auth import get_user_model
+
 
 def register(request):
     if request.method == 'POST':
@@ -19,3 +23,12 @@ def register(request):
 @login_required
 def profile(request):
     return render(request, 'users/profile.html')
+
+
+User = get_user_model()
+
+class UserListCreateAPIView(ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    

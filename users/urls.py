@@ -9,5 +9,6 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'), # template_name='users/login.html' is optional
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('profile/', views.profile, name='profile'),
+    path('api/users/', views.UserListCreateAPIView.as_view(), name='api_users'),
 
 ]

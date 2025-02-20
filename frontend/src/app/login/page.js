@@ -1,3 +1,5 @@
+import Signup from "../components/Signup";
+
 export default function Login() {
     return (
         <main>
@@ -6,30 +8,22 @@ export default function Login() {
                     <div className="col-6">
                         <h3>Login</h3>
                         <form>
-                            <div className="mb-3">
-                                <label htmlFor="username" className="form-label">Email</label>
-                                <input type="text" className="form-control" id="username" />
+                            <div style={{ minHeight: '50px' }}>
+                                
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="password" className="form-label">Password</label>
-                                <input type="password" className="form-control" id="password" />
+                                <label htmlFor="email2" className="form-label">Email</label>
+                                <input type="email" className="form-control" id="email2" />
                             </div>
-                            <button type="submit" className="btn btn-primary">Login</button>
+                            <div className="mb-3">
+                                <label htmlFor="password2" className="form-label">Password</label>
+                                <input type="password" className="form-control" id="password2" />
+                            </div>
+                            <button type="submit" className="btn btn-dark">Login</button>
                         </form>
                     </div>
                     <div className="col-6">
-                        <h3>Signup</h3>
-                        <form>
-                            <div className="mb-3">
-                                <label htmlFor="username" className="form-label">Email</label>
-                                <input type="text" className="form-control" id="username" />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="password" className="form-label">Password</label>
-                                <input type="password" className="form-control" id="password" />
-                            </div>
-                            <button type="submit" className="btn btn-primary">Register</button>
-                        </form>
+                        <Signup />
                     </div>
                 </div>
             </div>
