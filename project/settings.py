@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     # my apps
     'base.apps.BaseConfig',
     'users.apps.UsersConfig',
+    'backend.apps.BackendConfig',
+    # third party
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
