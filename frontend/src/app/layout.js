@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 export const metadata = {
@@ -12,9 +13,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Header />
-        <div className="container my-4">
+        <div className="container-fluid my-4">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
